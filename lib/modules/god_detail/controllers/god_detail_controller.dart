@@ -1,6 +1,6 @@
+import 'package:bhakti_app/shared/models/god_model.dart';
 import 'package:get/get.dart';
 
-import '../../shared/models/god_model.dart';
 
 class GodDetailController extends GetxController {
 

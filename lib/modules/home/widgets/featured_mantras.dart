@@ -1,12 +1,10 @@
+import 'package:bhakti_app/shared/models/jap_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 
 import '../../../core/routes/app_routes.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../music/Views/music_player_view.dart';
-import '../../shared/models/jap_model.dart';
-import '../../shared/models/song_model.dart';
+
 
 class FeaturedMantras extends StatelessWidget {
   const FeaturedMantras({super.key});

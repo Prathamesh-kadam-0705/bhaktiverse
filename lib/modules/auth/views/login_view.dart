@@ -7,32 +7,28 @@ import '../widgets/auth_button.dart';
 import '../widgets/auth_text_field.dart';
 
 class LoginView extends GetView<AuthController> {
-
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-
             AuthTextField(
-              controller:
-              controller.emailController,
+              controller: controller.emailController,
               hintText: "Email",
+              keyboardType: TextInputType.emailAddress,
             ),
 
             const SizedBox(height: 16),
 
             AuthTextField(
-              controller:
-              controller.passwordController,
+              controller: controller.passwordController,
               hintText: "Password",
               obscureText: true,
             ),
@@ -41,12 +37,12 @@ class LoginView extends GetView<AuthController> {
 
             Obx(
                   () => AuthButton(
-                text: controller.isLoading.value
-                    ? "Loading..."
-                    : "Login",
+                text: "Login",
+                isLoading: controller.loginLoading.value,
                 onPressed: controller.login,
               ),
             ),
+
             TextButton(
               onPressed: () {
                 Get.toNamed(

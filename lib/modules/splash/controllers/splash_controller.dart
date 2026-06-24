@@ -27,7 +27,8 @@ class SplashController extends GetxController {
         //   Routes.ONBOARDING,
         // );
             Get.offAllNamed(
-                Routes.MAIN_NAVIGATION,
+                // Routes.MAIN_NAVIGATION,
+                Routes.LOGIN,
               );
       },
     );

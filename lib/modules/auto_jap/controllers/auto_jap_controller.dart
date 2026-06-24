@@ -1,9 +1,9 @@
 import 'dart:async';
+import 'package:bhakti_app/shared/models/jap_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../../shared/models/jap_model.dart';
 
 
 class AutoJapController extends GetxController {

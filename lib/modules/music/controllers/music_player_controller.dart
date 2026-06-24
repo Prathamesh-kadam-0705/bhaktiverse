@@ -1,7 +1,7 @@
+import 'package:bhakti_app/shared/models/song_model.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../../shared/models/song_model.dart';
 
 class MusicPlayerController extends GetxController {
 

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../shared/controllers/global_jap_controller.dart';
+import '../../../shared/controllers/global_jap_controller.dart';
 
 class JapController extends GetxController {
 

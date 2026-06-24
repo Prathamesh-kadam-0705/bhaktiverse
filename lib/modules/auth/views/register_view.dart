@@ -10,55 +10,43 @@ class RegisterView extends GetView<AuthController> {
 
   @override
   Widget build(BuildContext context) {
-
-    final nameController = TextEditingController();
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
-
     return Scaffold(
-
       appBar: AppBar(
         title: const Text("Register"),
       ),
-
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-
             AuthTextField(
-              controller: nameController,
+              controller: controller.registerNameController,
               hintText: "Full Name",
             ),
 
             const SizedBox(height: 16),
 
             AuthTextField(
-              controller: emailController,
+              controller: controller.registerEmailController,
               hintText: "Email",
+              keyboardType: TextInputType.emailAddress,
             ),
 
             const SizedBox(height: 16),
 
             AuthTextField(
-              controller: passwordController,
+              controller: controller.registerPasswordController,
               hintText: "Password",
               obscureText: true,
             ),
 
             const SizedBox(height: 24),
 
-            AuthButton(
-              text: "Register",
-              onPressed: () {
-
-                Get.snackbar(
-                  "Success",
-                  "Registration Successful",
-                );
-
-                Get.back();
-              },
+            Obx(
+                  () => AuthButton(
+                text: "Register",
+                isLoading: controller.registerLoading.value,
+                onPressed: controller.register,
+              ),
             ),
           ],
         ),

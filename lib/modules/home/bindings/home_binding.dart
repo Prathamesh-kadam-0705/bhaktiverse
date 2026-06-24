@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../../shared/controllers/global_jap_controller.dart';
+import '../../../shared/controllers/global_jap_controller.dart';
 import '../controllers/home_controller.dart';
 
 class HomeBinding extends Bindings {

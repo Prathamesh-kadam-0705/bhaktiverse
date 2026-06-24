@@ -1,7 +1,7 @@
+import 'package:bhakti_app/shared/models/god_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/app_assets.dart';
-import '../../shared/models/god_model.dart';
 
 import 'package:get/get.dart';
 

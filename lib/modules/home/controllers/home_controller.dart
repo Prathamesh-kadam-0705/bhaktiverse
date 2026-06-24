@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/constants/app_assets.dart';
-import '../../shared/controllers/global_jap_controller.dart';
+import '../../../shared/controllers/global_jap_controller.dart';
 import '../models/home_banner_model.dart';
 
 class HomeController extends GetxController {

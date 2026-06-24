@@ -1,3 +1,4 @@
+import 'package:bhakti_app/modules/auto_jap/views/auto_jap_view.dart';
 import 'package:get/get.dart';
 
 import '../../modules/auth/bindings/auth_binding.dart';
@@ -5,7 +6,6 @@ import '../../modules/auth/views/forgot_password_view.dart';
 import '../../modules/auth/views/login_view.dart';
 import '../../modules/auth/views/register_view.dart';
 import '../../modules/auto_jap/bindings/auto_jap_binding.dart';
-import '../../modules/auto_jap/view/auto_jap_view.dart';
 import '../../modules/favorites/bindings/favorites_binding.dart';
 import '../../modules/favorites/views/favorites_view.dart';
 import '../../modules/festivals/bindings/festivals_binding.dart';
