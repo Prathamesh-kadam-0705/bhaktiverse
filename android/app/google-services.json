@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819703707237",
+    "project_id": "bhaktiverse-55223",
+    "storage_bucket": "bhaktiverse-55223.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819703707237:android:0e9d79817ebb4bc5ac388c",
+        "android_client_info": {
+          "package_name": "com.bhaktiverse.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU_Yg2Wugo017QlmEJd8X2Nay8-RI76Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
