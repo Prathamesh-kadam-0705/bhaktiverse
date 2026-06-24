@@ -1,17 +1,20 @@
-import 'package:bhakti_app/shared/controllers/global_jap_controller.dart';
 import 'package:get/get.dart';
 
-import '../../modules/home/controllers/home_controller.dart';
+import '../../modules/shared/controllers/global_jap_controller.dart';
+import '../theme/theme_controller.dart';
 
 class InitialBinding extends Bindings {
-
   @override
   void dependencies() {
 
-    Get.put(GlobalJapController());
+    Get.put(
+      ThemeController(),
+      permanent: true,
+    );
 
-    Get.lazyPut<HomeController>(
-          () => HomeController(),
+    Get.put(
+      GlobalJapController(),
+      permanent: true,
     );
   }
 }
