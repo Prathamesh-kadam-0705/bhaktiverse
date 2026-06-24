@@ -2,6 +2,7 @@ name: bhakti_app
 description: Jap Counter & Bhakti Audio App - A spiritual daily-use Flutter application
 
 publish_to: 'none'
+
 version: 1.0.0+1
 
 environment:
@@ -10,7 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
 
   cupertino_icons: ^1.0.8
   get: ^4.7.2
@@ -30,7 +30,6 @@ dependencies:
   firebase_storage: ^13.0.0
   firebase_messaging: ^16.0.0
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -40,8 +39,6 @@ dev_dependencies:
   retrofit_generator: ^8.1.0
   json_serializable: ^6.7.1
   json_annotation: ^4.8.1
-
-
 
 flutter:
   uses-material-design: true
@@ -60,11 +57,3 @@ flutter:
           weight: 700
         - asset: assets/fonts/Mukta-SemiBold.ttf
           weight: 600
-
-
-flutter_launcher_icons:
-  android: true
-  ios: false
-  image_path: "assets/logo.png"
-  adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/logo.png"
