@@ -7,6 +7,9 @@ class AuthService {
 
   bool get isLoggedIn => currentUser != null;
 
+  Stream<User?> get authStateChanges => _auth.authStateChanges();
+
+
   Future<UserCredential> login({
     required String email,
     required String password,

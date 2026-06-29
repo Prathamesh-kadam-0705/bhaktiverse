@@ -19,35 +19,45 @@ class SettingsView extends GetView<SettingsController> {
 
       body: Obx(
             () => Column(
-          children: [
+              children: [
 
-            SettingsTileWidget(
-              title: "Dark Mode",
-              trailing: Switch(
-                value: controller.isDarkMode.value,
-                onChanged: (_) =>
-                    controller.toggleTheme(),
-              ),
+                SettingsTileWidget(
+                  title: "Dark Mode",
+                  trailing: Switch(
+                    value: controller.isDarkMode.value,
+                    onChanged: (_) => controller.toggleTheme(),
+                  ),
+                ),
+
+                SettingsTileWidget(
+                  title: "Notifications",
+                  trailing: Switch(
+                    value: controller.notificationsEnabled.value,
+                    onChanged: (_) => controller.toggleNotifications(),
+                  ),
+                ),
+
+                const Divider(),
+
+                SettingsTileWidget(
+                  title: "About App",
+                  trailing: const Icon(Icons.info_outline),
+                  onTap: () {
+                    // We'll add About page later
+                  },
+                ),
+
+                SettingsTileWidget(
+                  title: "Logout",
+                  trailing: const Icon(
+                    Icons.logout,
+                    color: Colors.red,
+                  ),
+                  onTap: controller.logout,
+                ),
+
+              ],
             ),
-
-            SettingsTileWidget(
-              title: "Notifications",
-              trailing: Switch(
-                value:
-                controller.notificationsEnabled.value,
-                onChanged: (_) =>
-                    controller.toggleNotifications(),
-              ),
-            ),
-
-            const Divider(),
-
-            const ListTile(
-              leading: Icon(Icons.info_outline),
-              title: Text("About App"),
-            ),
-          ],
-        ),
       ),
     );
   }

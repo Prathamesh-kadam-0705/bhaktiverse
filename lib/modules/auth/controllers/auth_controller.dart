@@ -1,3 +1,5 @@
+import 'package:bhakti_app/core/services/user_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,6 +8,9 @@ import '../../../core/services/auth_service.dart';
 
 class AuthController extends GetxController {
   final AuthService _authService = Get.find<AuthService>();
+  final UserService _userService = Get.find<UserService>();
+
+  final Rxn<User> firebaseUser = Rxn<User>();
 
   // Login
   final emailController = TextEditingController();
@@ -23,6 +28,17 @@ class AuthController extends GetxController {
   final loginLoading = false.obs;
   final registerLoading = false.obs;
   final forgotPasswordLoading = false.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+
+    firebaseUser.bindStream(_authService.authStateChanges);
+  }
+
+  bool get isLoggedIn => firebaseUser.value != null;
+
+  String get uid => firebaseUser.value!.uid;
 
   bool _isValidEmail(String email) {
     return GetUtils.isEmail(email);
@@ -110,9 +126,15 @@ class AuthController extends GetxController {
     try {
       registerLoading.value = true;
 
-      await _authService.register(
+      final credential = await _authService.register(
         email: email,
         password: password,
+      );
+
+      await _userService.createUser(
+        uid: credential.user!.uid,
+        name: name,
+        email: email,
       );
 
       Get.back();
